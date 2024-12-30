@@ -1,0 +1,484 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family:'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+header{
+    position:fixed;
+    width: 100%;
+    top:0;
+    right:0;
+    z-index: 1000;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+    padding:20px 10%;
+    background-color:none;
+    position: sticky;
+    top:0px;
+    left:0px;   
+}
+
+.logo{ 
+    font-size: 20px; 
+    font-weight: bold; 
+    color:#2e3a87;
+    text-align:left;
+    letter-spacing: 2px;
+    text-transform: uppercase; 
+    margin-top: 2px; 
+    transition: color 0.3s ease;
+}
+.logo:hover {
+    color: #1a68a7; /* Couleur bleue au survol */
+    cursor: pointer; /* Changer le curseur pour indiquer que c'est cliquable */
+}
+.navmenu{
+    display:flex;
+}
+.navmenu li{
+    color:#2e3a87;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 20px;
+    font-weight: 400;
+    transition: all ,0.3s ease;
+
+}
+.navmenu li:hover{
+    color:#1a68a7;
+}
+.nav-icon{
+    display:flex;
+    align-items: center;
+}
+.nav-icon i{
+    margin-right: 20px;
+    color:#2e3a87;
+    font-size: 25px;
+    font-weight: 400;
+    transition: all 0.3 ease;
+}
+.nav-icon i:hover{
+    transform:scale(1,1);
+    color:#1a68a7;
+
+}
+.nav-icon i p{
+    font-size:12px;
+    display: block;
+}
+#menu-icon{
+    font-size:35px;
+    color:#2e3a87;
+    z-index: 10001;
+    cursor:pointer;
+}
+section{
+    padding:5% 10%;
+}
+.main-home{
+    width:100%;
+    height:100vh;
+    background-image: url(home2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align:center;
+    text-decoration: none;
+    background-color: #1a73e8; /* Bleu attrayant */
+    color: white;
+    border-radius: 50px; /* Bordures arrondies pour un look moderne */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre subtile pour un effet de profondeur */
+    transition: all 0.3s ease-in-out; /* Transition fluide pour les effets de survol */
+    letter-spacing: 1px; /* Espacement des lettres pour un effet plus aéré */
+    position: relative;
+    top: 290px;
+    left:650px;
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Couleur plus sombre au survol */
+    transform: translateY(-5px); /* Effet de déplacement pour un effet de survol dynamique */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Ombre plus marquée lors du survol */
+}
+
+.cta-button:active {
+    transform: translateY(0); /* Effet d'appui sur le bouton */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre plus légère lors du clic */
+}
+.main-text h5{
+    font-size: 20px; /* Taille de la police */
+    font-weight: bold; /* Gras pour mettre en valeur */
+    color:#2e3a87; /* Une couleur bleu-violet attrayante */
+    letter-spacing: 2px; /* Espacement entre les lettres */
+    text-align:left;
+    margin-top: 10px;
+}
+.main-text h5:hover{
+    color:#0056b3;
+}
+header.sticky{
+  background: #fff;
+  padding: 20px 10%;
+  box-shadow: 0px 0px 10px rgb(0,0,0/10%);
+}
+
+/* Style de base pour la section des produits tendances */
+/* Barre de Recherche */
+.search-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-container form {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px;
+}
+
+.search-container input[type="text"] {
+    padding: 7px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    outline: none;
+    width: 200px;
+    transition: width 0.4s ease-in-out;
+}
+
+.search-container input[type="text"]:focus {
+    width: 300px;
+}
+
+.search-container button {
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+.search-container button i {
+    font-size: 1.2em;
+}
+
+.trending-product {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.center-text h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.produit {
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 450px; /* Hauteur fixe pour garantir la même taille */
+}
+
+.produit:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+.produit img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.produit img:active {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.produit-text {
+    padding: 10px;
+}
+
+.produit-text h5 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #007BFF;
+}
+
+.heart-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.heart-icon i {
+    color: #e74c3c;
+    font-size: 1.8em;
+}
+
+.heart-icon i:hover {
+    transform: scale(1.3);
+}
+
+.ratting {
+    padding: 10px;
+}
+
+.ratting i {
+    color: #f39c12;
+    font-size: 1.2em;
+}
+
+.prix h5 {
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.description {
+    padding: 10px;
+    font-size: 0.9em;
+    color: #666;
+    height: 60px; /* Hauteur fixe pour les descriptions */
+    overflow: hidden; /* Si le texte dépasse, il sera caché */
+    
+}
+
+.boutton {
+    margin: 10px 0;
+}
+
+.boutton .add-cart {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.boutton .add-cart:hover {
+    background-color: #0056b3;
+}
+/* Masquer la fenêtre par défaut */
+.loginAdmin ,.loginUser, .registerUser{
+    display: none; /* Masquer par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Fond sombre avec opacité */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Afficher la fenêtre lorsqu'elle est active */
+.loginAdmin.active ,.loginUser.active, .registerUser.active{
+    display: flex;
+    animation: fadeIn 0.3s ease-out; /* Effet d'apparition */
+}
+
+/* Animation pour l'apparition de la fenêtre */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Conteneur de la boîte de connexion */
+.form-box {
+    background: #ffffff; /* Couleur de fond blanche */
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 350px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre */
+    position: relative;
+    text-align: center;
+}
+
+/* En-tête de la boîte */
+.form-box h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Les champs d'entrée */
+.input-box {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background: #f9f9f9;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus {
+    background: #fff;
+    border-color: #007BFF; /* Couleur bleue */
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 35px;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+.input-box input:focus + label,
+.input-box input:not(:placeholder-shown) + label {
+    top: -5px;
+    font-size: 12px;
+    color: #007BFF; /* Couleur bleue */
+}
+
+.input-box .icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #007BFF; /* Icône bleue */
+}
+
+/* Bouton de connexion */
+.btn {
+    background: #007BFF; /* Couleur bleue */
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: #0056b3; /* Couleur bleue plus foncée */
+}
+
+/* Bouton "Remember Me" et lien "Forgot Password" */
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.remember-forgot a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+.register-link, .login-link { margin-top: 20px; } .register-link a, .login-link a { color: #007BFF; text-decoration: none; transition: 0.3s ease; } .register-link a:hover, .login-link a:hover { text-decoration: underline; }
+
+/* Animation pour les images au clic */
+@keyframes click-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1) rotate(5deg); }
+    100% { transform: scale(1); }
+}
+
+.produit img:active {
+    animation: click-animation 0.3s ease;
+}
+/* Animation pour les icônes de coeur au clic */
+@keyframes heart-click-animation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.5); }
+    100% { transform: scale(1); }
+}
+.heart-icon i:active {
+    animation: heart-click-animation 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
